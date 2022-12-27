@@ -1,0 +1,353 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: rgb(166, 173, 163);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 20px auto auto 1fr 7px 50px;
+    grid-template-areas:
+        "head"
+        "menu"
+        "grafica"
+        "destacado"
+        "minicatalogo" 
+        "precios" 
+        "foot" 
+    ;
+
+}
+
+@media only screen and (min-width: 1280px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1/3 1/3 1/3;
+        grid-template-rows: 100px 20px auto auto 1fr 7px 50px;
+        grid-template-areas:
+
+            "head" "head" "head"
+            "menu" "menu" "menu"
+            "grafica" "grafica" "grafica"
+            "destacado" "destacado" "destacado"
+            "minicatalogo" "minicatalogo" "minicatalogo"
+            "precios" "precios" "precios"
+            "foot" "foot" "foot"
+        ;
+    }
+}
+
+
+
+.header {
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+
+}
+
+.inicio {
+    height: auto;
+    text-decoration: none;
+    background-color: grey;
+    border-radius: 20%;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    align-content: stretch;
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px){
+    nav ul{
+       
+        flex-direction: row;
+     
+    }
+}
+
+@media only screen and (max-width: 768px){
+    nav ul{
+       
+        flex-direction: column;
+     
+    }
+}
+
+
+nav ul li:hover ul {
+    display: block;
+}
+
+
+nav ul li {
+    background-color: #a6a6a6;
+    display: inline-block;
+    justify-content: center;
+    align-content: flex-start;
+    position: relative;
+    font-weight: bold;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #a6a6a6;
+}
+
+
+nav ul li a {
+    background-color: #a6a6a6;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+}
+
+nav ul ul {
+    position: absolute;
+    display: none;
+}
+
+.principal {
+    background-color: #a6a6a6;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    position: relative;
+    font-weight: bold;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.productos a {
+    display: flex;
+    margin: 7px;
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+
+
+.grafica {
+    grid-area: grafica;
+}
+
+.grafica {
+    padding: 1px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin: 1px 1px 1px 1px;
+}
+
+.destacado {
+    grid-area: destacado;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minicatalogo {
+    grid-area: minicatalogo;
+}
+
+.minicatalogo img {
+    width: 260px;
+    height: 300px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 8px;
+}
+
+.minicatalogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 378px){
+    .minicatalogo{
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .minicatalogo{
+        flex-direction: row;
+    }
+}
+
+.precios {
+    grid-area: precios;
+    background-color: #000000;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.precios p {
+    display: block;
+}
+
+.foot {
+    grid-area: foot;
+}
+
+
+.contacto {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 30px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 5px 10px #B5C1C5, 0 0 0 10px #EEF5F7 inset;
+}
+
+.contacto input[type='submit'] {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(36, 36, 36);
+    cursor: pointer;
+}
+
+.contacto label {
+    display: block;
+    font-weight: bold;
+}
+
+.contacto div {
+    margin-bottom: 15px;
+}
+
+.contacto input[type='text'],
+.contacto textarea {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    resize: none;
+    box-shadow: 0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+
+.pantalones img {
+    margin-top: 3%;
+    width: 260px;
+    height: 300px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10px;
+}
+
+.pantalones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sale img {
+    margin-top: 3%;
+    width: 260px;
+    height: 300px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10px;
+}
+
+.sale {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.remeras img {
+    margin-top: 3%;
+    width: 260px;
+    height: 300px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10px;
+}
+
+.remeras {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.accesorios img {
+    margin-top: 3%;
+    width: 260px;
+    height: 300px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10px;
+}
+
+.accesorios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    color: black;
+    font-style: bold;
+    text-align: center;
+}
+
+.mapa iframe {
+    margin-top: 1%;
+    width: 500px;
+    height: 500px;
+    border: solid;
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+footer {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    text-align: center;
+}
